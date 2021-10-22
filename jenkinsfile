@@ -9,12 +9,12 @@ pipeline {
         }
         stage('Build EC2') {
             steps {
-                sh "jenkins-nginx/deploy.sh"
+                sh "./deploy.sh"
             }
         }
         stage('Test Nginx') {
             steps {
-                sh "jenkins-nginx/test.sh"
+                sh "./test.sh"
             }
         }
         stage('Build AMI') {
