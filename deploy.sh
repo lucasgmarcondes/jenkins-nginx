@@ -1,8 +1,8 @@
 #!/bin/bash
 
 cd /var/lib/jenkins/workspace/Pipeline_Infra/terraform
-sudo ~/terraform init
-sudo ~/terraform apply -auto-approve
+~/terraform init
+~/terraform apply -auto-approve
 
 echo "Aguardando criação de maquinas ..."
 sleep 10 # 10 segundos
