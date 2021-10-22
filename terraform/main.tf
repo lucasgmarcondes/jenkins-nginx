@@ -66,13 +66,13 @@ resource "aws_security_group" "jenkins" {
 }
 
 # terraform refresh para mostrar o ssh
-output "jenkins" {
+output "nginx" {
   value = [
-    "jenkins",
-    "id: ${aws_instance.jenkins.id}",
-    "private: ${aws_instance.jenkins.private_ip}",
-    "public: ${aws_instance.jenkins.public_ip}",
-    "public_dns: ${aws_instance.jenkins.public_dns}",
-    "ssh -i ~/.ssh/id_rsa ubuntu@${aws_instance.jenkins.public_dns}"
+    "nginx",
+    "id: ${aws_instance.nginx.id}",
+    "private: ${aws_instance.nginx.private_ip}",
+    "public: ${aws_instance.nginx.public_ip}",
+    "public_dns: ${aws_instance.nginx.public_dns}",
+    "ssh -i ~/.ssh/id_rsa ubuntu@${aws_instance.nginx.public_dns}"
   ]
 }
